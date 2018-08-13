@@ -8,10 +8,10 @@ from tweepy.streaming import StreamListener
 import socket
 import json
 
-access_token = "1016998718325714944-qiDlJqdbJ4NjvzwnTyqMpEkxy20LFG"
-access_token_secret = "afAtwBEK5b34ia38YD153ZlNBkjfpRRCchze3HrqNpaer"
-consumer_key = "2HfXeNDH2vzRQU3zlsWZI0uZN"
-consumer_secret = "avR0MbWwhPsvDctmyYmq1vJ6MQ2butKq8HY5Dt0HB0JgHVhKxH"
+access_token = "ACCESS_TOKEN"
+access_token_secret = "ACCESS_TOKEN_SECRET"
+consumer_key = "CONSUMER_KEY"
+consumer_secret = "CONSUMER_SECRET"
 
 class TweetsListener(StreamListener):
 
@@ -42,7 +42,7 @@ def sendData(c_socket):
 
 if __name__ == "__main__":
     s = socket.socket()  # Create a socket object
-    host = "192.168.43.112"  # Get local machine name
+    host = "IPADDRESS"  # Get local machine name
     port = 7777  # Reserve a port for your service.
     s.bind((host, port))  # Bind to the port
 
