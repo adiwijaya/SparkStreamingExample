@@ -10,7 +10,7 @@ sc.setLogLevel("ERROR")
 ssc = StreamingContext(sc, 10)
 
 streamingContext = StreamingContext(sc, 5)
-addresses = [("159.65.130.50", 2727)]
+addresses = [("IPADDRESS", 2727)]
 flumeStream = FlumeUtils.createPollingStream(streamingContext, addresses)
 
 lines = flumeStream.map(lambda x: x[1].split(","))
