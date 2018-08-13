@@ -124,7 +124,7 @@ def get_or_create_ssc():
     #sqlContext = SQLContext(sc)
     ssc = StreamingContext(sc, 4)
 
-    IP = "192.168.43.112"
+    IP = "IPADDRESS"
     Port = 7777
     lines = ssc.socketTextStream(IP, Port)
 
