@@ -5,7 +5,7 @@ topic_name = "floatTopic"
 key = "key1"
 value = "value1"
 
-_producer = KafkaProducer(bootstrap_servers=['159.65.130.79:9092'],
+_producer = KafkaProducer(bootstrap_servers=['IPADDRESS:9092'],
                           api_version=(0, 10))
 
 def sendMessage(value):
