@@ -17,7 +17,7 @@ sc.setLogLevel("ERROR")
 ssc = StreamingContext(sc, 10)
 
 # IP address & port needs to be from zookeeper
-kafkaStream = KafkaUtils.createStream(ssc, '159.65.130.79:2181',
+kafkaStream = KafkaUtils.createStream(ssc, 'IPADDRESS:2181',
                                       'consumer-group', {'floatTopic':1})
 
 lines = kafkaStream.map(lambda x: (x[0],float(x[1])))
