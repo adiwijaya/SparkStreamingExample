@@ -10,7 +10,7 @@ sc.setLogLevel("ERROR")
 spark = SparkSession(sc)
 ssc = StreamingContext(sc, 3)
 
-IP = "192.168.43.112"
+IP = "IPADDRESS"
 Port = 2626
 lines = ssc.socketTextStream(IP, Port)
 
